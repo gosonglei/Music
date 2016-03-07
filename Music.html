@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">来自：宋磊</h3>
+                </div>
+                <div class="panel-body">
+                    <h1 style="text-align: center">音乐分享</h1>
+                </div>
+           </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="text-align: center">音乐</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>歌曲</th>
+                            <th>作者</th>
+                            <th>控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="active">
+                            <td>
+                                天空之城
+                            </td>
+                            <td>吟唱版</td>
+                            <td>
+                                <button type="button" class="btn btn-success"> <a  href="#" onClick="playlist(this)" id="http://7xq2dv.com1.z0.glb.clouddn.com/1">播放</a></button>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>My Love</td>
+                            <td>Westlife</td>
+                            <td>
+                                <button type="button" class="btn btn-success"> <a  href="#" onClick="playlist(this)" id="http://7xq2dv.com1.z0.glb.clouddn.com/2">播放</a></button>
+                            </td>
+                        </tr>
+                        <tr  class="warning">
+                            <td>一生所爱</td>
+                            <td>卢冠廷</td>
+                            <td>
+                                <button type="button" class="btn btn-success"> <a  href="#" onClick="playlist(this)" id="http://7xq2dv.com1.z0.glb.clouddn.com/3">播放</a></button>
+                            </td>
+                        </tr>
+                        <tr  class="danger">
+                            <td>南山南</td>
+                            <td>马頔</td>
+                            <td>
+                                <button type="button" class="btn btn-success"> <a  href="#" onClick="playlist(this)" id="http://7xq2dv.com1.z0.glb.clouddn.com/4">播放</a></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-6 col-sm-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">播放器</h3>
+                </div>
+                <div class="panel-body">
+                    <audio id="myVideo"  controls="controls" preload="auto">
+                        <source  src="http://7xq2dv.com1.z0.glb.clouddn.com/1.mp3" type="video/mp4">
+                        <source  src="http://7xq2dv.com1.z0.glb.clouddn.com/2.mp3" type="video/mp4">
+                        <source  src="http://7xq2dv.com1.z0.glb.clouddn.com/3.mp3" type="video/mp4">
+                        <source  src="http://7xq2dv.com1.z0.glb.clouddn.com/4.mp3" type="video/mp4">
+                    </audio>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function playlist(a){
+        var MV=document.getElementById("myVideo");
+        MV.src=a.id+'.mp3';
+        MV.play();
+    }
+</script>
+</body>
+</html>
